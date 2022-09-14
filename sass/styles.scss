@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+@mixin flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin width-desktop {
+    width: 40%;
+}
+
+@mixin width-mobile {
+    width: 85%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    // border: 1px solid black;
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.container {
+    @include flex-center;
+    padding: 2rem 0;
+    width: 100%;
+    // height: 100vh;
+    gap: 3rem;
+}
+
+.top {
+    @include flex-center();
+    @include width-desktop();
+    gap: 2rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.text {
+    @include flex-center();
+    text-align: center;
+    gap: 1rem;
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: hsl(0, 0%, 59%);
+        span {
+            font-weight: 700;
+            color: hsl(209, 33%, 12%);
+        }
+    }
+}
+
+.input-error {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.input {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    font-family: 'Libre Franklin', sans-serif;
+    input[type=email] {
+        width: 70%;
+        height: 3rem;
+        border-radius: 30px;
+        padding: 0 2rem;
+        outline: none;
+        border: 2px solid hsl(0, 0%, 59%);
+        color: hsl(0, 0%, 59%);
+        &::placeholder {
+            color: hsl(0, 0%, 59%);
+            font-family: 'Libre Franklin', sans-serif;
+        }
+        &.error {
+            border-color: hsl(354, 100%, 66%);
+        }
+    }
+    button {
+        width: 30%;
+        border-radius: 30px;
+        outline: none;
+        border: none;
+        background-color: hsl(223, 87%, 63%);
+        color: white;
+        font-size: 0.9rem;
+        font-family: 'Libre Franklin', sans-serif;
+        cursor: pointer;
+        &:hover {
+            background-color: hsl(223, 100%, 88%);
+        }
+    }
+}
+
+p.error-text {
+    color: hsl(354, 100%, 66%);
+    margin: 0.5rem 0 0 2rem;
+    width: 100%;
+    text-align: left;
+    font-size: 13px;
+}
+
+.illustration {
+    @include flex-center();
+    @include width-desktop();
+    img {
+        width: 100%;
+    }
+}
+
+.bottom {
+    @include width-desktop();
+}
+
+.copyright {
+    color: hsl(0, 0%, 59%);
+    font-size: 13px;
+    text-align: center;
+}
+
+@media (max-width: 687px) {
+    .top {
+        @include width-mobile();
+    }
+    .logo {
+        img {
+            width: 70%;
+        }
+    }
+    .text {
+        h1 {
+            font-size: 1.7rem;
+        }
+    }
+    .input {
+        flex-direction: column;
+        input[type=email] {
+            width: 100%;
+        }
+        button {
+            height: 3rem;
+            width: 100%;
+        }
+    }
+    .illustration {
+        @include width-mobile();
+    }
+    .bottom {
+        @include width-mobile();
+    }
+}
