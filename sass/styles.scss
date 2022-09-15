@@ -109,6 +109,11 @@ p.error-text {
     width: 100%;
     text-align: left;
     font-size: 13px;
+    animation: expandy 0.5s ease alternate;
+}
+
+p.error-text::content {
+    animation: expandy 0.5s ease alternate;
 }
 
 .illustration {
@@ -158,5 +163,15 @@ p.error-text {
     }
     .bottom {
         @include width-mobile();
+    }
+}
+
+@keyframes expandy {
+    0% {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    100% {
+        transform: scaleX(1);
     }
 }

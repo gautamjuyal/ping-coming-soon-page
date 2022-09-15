@@ -5,6 +5,7 @@ This is a solution to the [Ping coming soon page challenge on Frontend Mentor](h
 
 ## Overview
 
+Coming soon page with in-browser email validation.
 ### The challenge
 
 Users should be able to:
@@ -17,23 +18,12 @@ Users should be able to:
 	- The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Please provide a valid email address"*
 
 
-## My process
-
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
-### What I learned
-
+- JavaScript
 
 
 
